@@ -17,36 +17,49 @@
 <!--    Header starts-->
     <header>
         <div class="row">
-            <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
-            <button type="button" class="btn btn-primary">Search</button>
-            <button type="button" class="btn btn-outline-primary">Current</button>
+            <input class="search-input" type="text" placeholder="Enter a city" aria-label="default input example">
+            <div class="btn-set">
+                <button type="button" class="btn btn-primary">Search</button>
+                <button type="button" class="btn btn-outline-primary">Current</button>
+            </div>
         </div>
     </header>
 <!--    Header ends-->
 
 <!--    Main section starts-->
     <section class="main-section">
-<!--        Date and city info-->
-        <div class="date-city-display">
-            <div class="current-date">
-                <div>19:38</div>
-                <div>Mon, 15 Aug</div>
+<!--        Current Info-->
+        <div class="current-wrapper">
+            <div class="box">
+                <div class="date-city-display">
+                    <div class="city">
+                        Kyiv, Ukraine
+                    </div>
+                    <div class="current-date">
+                        Monday, 15 Aug
+                    </div>
+
+                </div>
+                <!--      Weather display  -->
+                <div class="weather-display">
+                    <div class="weather-img">
+                        <img src="img/cloudy_light_color_96dp.png" alt="cloudy">
+                    </div>
+                    <div class="weather-description">Cloudy</div>
+                </div>
             </div>
-            <div class="city">
-                Kyiv, Ukraine
+            <div class="box">
+                <div class="temperature">25°</div>
+                <div class="unit-switch">
+                    <span>°C</span> / <span>°F</span>
+                </div>
             </div>
-        </div>
-<!--      Weather display  -->
-        <div class="weather-display">
-            <div class="weather-img"></div>
-            <div class="temperature">18 °C</div>
-            <div class="weather-description">Cloudy</div>
         </div>
 
 <!--        Additional Info-->
         <div class="additional-box">
             <div class="additional-item">
-                <div><span>18</span> °C</div>
+                <div><span>18</span>°C</div>
                 <div>RealFeel</div>
             </div>
             <div class="additional-item">
@@ -54,7 +67,7 @@
                 <div>Humidity</div>
             </div>
             <div class="additional-item">
-                <div><span>3</span>km h </div>
+                <div><span>3</span>km/h</div>
                 <div>Wind</div>
             </div>
             <div class="additional-item">
@@ -67,28 +80,46 @@
         <div class="forecast-wrapper">
             <div class="forecast-item">
                 <div class="day">Tue</div>
-                <div class="img"></div>
+                <img src="img/heavy_rain_light_color_96dp.png" alt="">
                 <div class="temp">
-                    <div>16°</div>
-                    <div>13°</div>
+                    <span>16°</span>
+                    <span>13°</span>
                 </div>
             </div>
 
             <div class="forecast-item">
                 <div class="day">Wen</div>
-                <div class="img"></div>
+                <img src="img/sunny_light_color_96dp.png" alt="">
                 <div class="temp">
-                    <div>15°</div>
-                    <div>12°</div>
+                    <span>15°</span>
+                    <span>12°</span>
                 </div>
             </div>
 
             <div class="forecast-item">
                 <div class="day">Thu</div>
-                <div class="img"></div>
+                <img src="img/partly_cloudy_light_color_96dp.png" alt="">
                 <div class="temp">
-                    <div>17°</div>
-                    <div>14°</div>
+                    <span>17°</span>
+                    <span>14°</span>
+                </div>
+            </div>
+
+            <div class="forecast-item">
+                <div class="day">Fri</div>
+                <img src="img/snow_showers_snow_light_color_96dp.png" alt="">
+                <div class="temp">
+                    <span>17°</span>
+                    <span>14°</span>
+                </div>
+            </div>
+
+            <div class="forecast-item">
+                <div class="day">Sat</div>
+                <img src="img/isolated_scattered_tstorms_day_light_color_96dp.png" alt="">
+                <div class="temp">
+                    <span>17°</span>
+                    <span>14°</span>
                 </div>
             </div>
 
@@ -98,7 +129,7 @@
 
 <!--    Footer starts-->
     <footer>
-        <p>Open-source code by Ivanna Pokhyl</p>
+        <p>This project was coded by Ivanna Pokhyl and is open-sourced on GitHub and hosted on Netlify </p>
     </footer>
 <!--Footer ends-->
 </div>
