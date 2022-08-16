@@ -11,49 +11,45 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,200;0,400;0,500;0,700;0,900;1,200;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="container">
 <!--Wrapper starts-->
 <div class="wrapper">
-<!--    Header starts-->
-    <header>
-        <div class="row">
-            <input class="search-input" type="text" placeholder="Enter a city" aria-label="default input example">
-            <div class="btn-set">
-                <button type="button" class="btn btn-primary">Search</button>
-                <button type="button" class="btn btn-outline-primary">Current</button>
-            </div>
-        </div>
-    </header>
-<!--    Header ends-->
-
 <!--    Main section starts-->
     <section class="main-section">
+<!--        Search block-->
+        <div class="search-row">
+            <input type="text" class="search-input">
+            <div class="current-location-btn">
+
+            </div>
+        </div>
+
 <!--        Current Info-->
         <div class="current-wrapper">
-            <div class="box">
-                <div class="date-city-display">
-                    <div class="city">
-                        Kyiv, Ukraine
-                    </div>
-                    <div class="current-date">
-                        Monday, 15 Aug
-                    </div>
+            <div class="block">
+                <h1 class="city">Kyiv</h1>
+                <div class="date">Thu, Aug 16</div>
+            </div>
+            <div class="block">
+                <div class="time">21:36</div>
+            </div>
+        </div>
 
-                </div>
-                <!--      Weather display  -->
-                <div class="weather-display">
-                    <div class="weather-img">
-                        <img src="img/cloudy_light_color_96dp.png" alt="cloudy">
-                    </div>
-                    <div class="weather-description">Cloudy</div>
-                </div>
+        <!--      Weather display  -->
+        <div class="weather-display">
+            <div>
+                <img src="img/cloudy_light_color_96dp.png" alt="cloudy">
             </div>
-            <div class="box">
-                <div class="temperature">25°</div>
+            <div class="weather">
+                <div>
+                    <div class="temperature">25°</div>
+                    <div class="description">Cloudy</div>
+                </div>
                 <div class="unit-switch">
-                    <span>°C</span> / <span>°F</span>
+                    <span>C</span>
+                    <span>F</span>
                 </div>
             </div>
+
         </div>
 
 <!--        Additional Info-->
@@ -80,10 +76,12 @@
         <div class="forecast-wrapper">
             <div class="forecast-item">
                 <div class="day">Tue</div>
-                <img src="img/heavy_rain_light_color_96dp.png" alt="">
-                <div class="temp">
-                    <span>16°</span>
-                    <span>13°</span>
+                <div class="block">
+                    <img src="img/heavy_rain_light_color_96dp.png" alt="">
+                    <div class="temp">
+                        <span>16°</span>
+                        <span>13°</span>
+                    </div>
                 </div>
             </div>
 
@@ -105,23 +103,6 @@
                 </div>
             </div>
 
-            <div class="forecast-item">
-                <div class="day">Fri</div>
-                <img src="img/snow_showers_snow_light_color_96dp.png" alt="">
-                <div class="temp">
-                    <span>17°</span>
-                    <span>14°</span>
-                </div>
-            </div>
-
-            <div class="forecast-item">
-                <div class="day">Sat</div>
-                <img src="img/isolated_scattered_tstorms_day_light_color_96dp.png" alt="">
-                <div class="temp">
-                    <span>17°</span>
-                    <span>14°</span>
-                </div>
-            </div>
 
         </div>
     </section>
@@ -134,7 +115,7 @@
 <!--Footer ends-->
 </div>
 <!--Wrapper ends-->
-</div>
+
 
 <!--JavaScript files-->
 <script src="src/app.js"></script>
