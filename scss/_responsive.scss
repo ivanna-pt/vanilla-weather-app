@@ -1,0 +1,128 @@
+@include media-md{
+  .wrapper{
+    width: 90%;
+  }
+
+  .search-row, .info, .weather, .additional, .forecast{
+    @include div-margins($breakpoint-md);
+  }
+
+  .forecast__block img{
+    width: 4.5rem;
+  }
+
+  .forecast__temp-max{
+    font-size: 2rem;
+  }
+}
+
+@include media-sm{
+  html{
+    font-size: 14px;
+  }
+
+.text-secondary{
+  color: $secondary-color;
+}
+
+   .wrapper{
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .main-section{
+    margin: 1rem;
+    background-color: inherit;
+    border-radius: unset;
+    box-shadow:  none;
+  }
+
+  .weather{
+    flex-flow: row-reverse;
+
+    &__image {
+      margin: 0;
+      text-align: center;
+      img{
+        width: 7rem;
+      }
+    }
+  }
+
+  .additional{
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+
+    &::before{
+      content: '';
+      position: absolute;
+      @include overlay;
+    }
+
+    &__item{
+      width: 100%;
+      padding: 0.25rem 0;
+      display: flex;
+      flex-flow: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 2;
+
+      &-name, &-value{
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  .forecast{
+    position: relative;
+    flex-direction: column;
+
+    &::before{
+      content: '';
+      position: absolute;
+      @include overlay;
+    }
+
+    &__item{
+      padding: 0.25rem 0;
+      flex-direction: row;
+      z-index: 2;
+
+      &>div{
+        flex: 1;
+      }
+    }
+
+    &__block{
+      margin: 0;
+
+      & img{
+        width: 3rem;
+      }
+    }
+
+    &__temp{
+      flex-direction: row;
+      flex: 1;
+      &-min{
+        flex: 1;
+      }
+      &-max{
+        font-size: 1.25rem;
+        flex: 1;
+      }
+    }
+  }
+}
+
+@include media-xl{
+  html{
+    font-size: 20px;
+  }
+
+  .wrapper{
+    width: 800px;
+  }
+}

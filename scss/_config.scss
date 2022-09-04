@@ -1,0 +1,72 @@
+$font-family: 'Noto Sans', sans-serif;
+$primary-color: #212529;
+$secondary-color: #457b9d;
+$accent-color: #a8dadc;
+$bg-color: #f1faee;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1200px;
+
+
+*,
+*::after,
+*::before{
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+@mixin transition-ease{
+  transition: all .4s ease-in-out;
+}
+
+@mixin div-margins($breakpoint){
+  @if ($breakpoint > $breakpoint-md) {
+    margin: 0.75rem 1.5rem 0;
+  } @else {
+    margin: 1.75rem 1.5rem 0;
+}
+}
+
+@mixin overlay{
+  top: -5px;
+  left: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 10px);
+  background-color: #fff;
+  opacity: 0.5;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+@mixin media-sm{
+  @media screen and (max-width: 576px){
+    @content;
+  }
+}
+
+@mixin media-md{
+  @media screen and (max-width: 768px){
+    @content;
+  }
+}
+
+@mixin media-xl{
+  @media screen and (min-width: 1600px){
+    @content;
+  }
+}
+
+@function set-text-color($color){
+  @if (lightness($color) > 50%){
+    @return $primary-color;
+  } @else {
+    @return #f1faee;
+  }
+}
+
+
+
+
+
