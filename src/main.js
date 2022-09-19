@@ -1,3 +1,7 @@
+
+
+
+//Toggle Units
 const fahrenheitBtn = document.querySelector('#fahrenheit-btn');
 const celsiusBtn = document.querySelector('#celsius-btn');
 const unitSwitch = document.querySelector('.weather__unit-switch');
